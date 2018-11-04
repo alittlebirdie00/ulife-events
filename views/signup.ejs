@@ -1,0 +1,137 @@
+<% include partials/header %>
+
+<div class="container">
+    
+    <h1 class="title">Sign Up</h1>
+
+    <form method="POST" action="/signup">
+      <div class="field">
+        <label class="label">Username</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-success" type="text" placeholder="Text input" 
+              value="bulma" name="username" required>
+              
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+          <p class="help is-success">This username is available</p>
+      </div>
+      
+      <div class="field">
+        <label class="label">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-danger" type="email" placeholder="Email input"
+              value="hello@" name="email" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+          </div>
+        <p class="help is-danger">This email is invalid</p>
+      </div>
+      
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-danger" type="password" 
+            placeholder="Password input" name="password" required>
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">First Name</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="text" placeholder="First Name" name="firstname" required>
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">Last Name</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="text" placeholder="Last Name" name="lastname" required>
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">School Name</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="text" placeholder="Last Name" name="schoolname" required>
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+        </div>
+      </div>
+      
+      <div class="field">
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="gender_male"> Male
+          </label>
+          <label class="radio">
+            <input type="radio" name="gender_female"> Female
+          </label>
+        </div>
+      </div> 
+      
+      <div class="field">
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="level_student"> Student
+          </label>
+          <label class="radio">
+            <input type="radio" name="level_admin"> Admin
+          </label>
+          <label class="radio">
+            <input type="radio" name="level_super"> Super Admin
+          </label>          
+        </div>
+      </div> 
+      
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox">
+            I agree to the <a href="#">terms and conditions</a>
+          </label>
+        </div>
+      </div>
+      
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Submit</button>
+        </div>
+        <div class="control">
+          <button class="button is-text">Cancel</button>
+        </div>
+      </div>
+    </form>
+</div>
+
+

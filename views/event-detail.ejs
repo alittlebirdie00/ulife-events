@@ -1,0 +1,76 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-7">
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-danger">
+            <p class="title"><%= event.title %></p>
+            <p class="subtitle"><%= event.subtitle %>Subtitle</p>
+
+            <div class="content">
+              <!-- Content -->
+              <%- event.description %>
+
+            </div>
+            
+          </article>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-success">
+          <div class="content">
+            <p class="subtitle">Location</p>
+            <p class="title is-5"><%= event.location %></p>
+
+            <div class="content">
+              <!-- Content -->
+              <div id="map" style="height:350px;"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    
+    <div class="box">
+      <article class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+            </p>            
+          </div>
+        </div>
+      </article>
+    </div>
+</div>
+
+
+<script>
+    /*var vue = new Vue({
+        el: '#map',
+        data: {
+            mapdiv: true
+        },
+        mounted: function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: -34.397, lng: 150.644},
+              zoom: 8
+            }); 
+        }
+    });*/
+    
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb3HQreMxC-J7hGK8KW9bszhE2-bFD4eE&callback=initMap"
+    async defer></script>
+
+<% include partials/footer %>

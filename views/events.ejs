@@ -1,0 +1,61 @@
+<% include partials/header %>
+
+<!-- CONTAINER -->
+<div class="container">
+    
+    <!-- HERO BANNER -->
+    <section class="hero is-light">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">This is the events page</h1>
+                <h2 class="subtitle">View the events that our going on at your UCF!</h2>
+                
+                <% if (userInSession.userLevel == 'Admin') { %>
+                  <p>
+                      <a id="postButton" class="button is-primary" href="/events/new" v-on:click="openNewEventModel">Post An Event!</a>
+                  </p>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    
+    <div>
+        <% events.forEach(function(event) { %>
+            <a href="/events/<%= event.event_id %>">
+            <div class="card" id="event-card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4"><%= event.title %></p>
+                    <p class="subtitle is-6"><%= event.schoolname %></p>
+                  </div>
+                </div>
+            
+                <div class="content">
+                  <%- event.description %>
+                </div>
+              </div> 
+            </div>
+            </a>
+        <% }); %>
+    </div>
+    
+</div>
+
+<% include partials/footer %>
+
+<script>
+  var vue = new Vue({
+    el: '#event-card',
+    data: {
+      
+    }, methods: {
+      
+    }
+  });
+</script>

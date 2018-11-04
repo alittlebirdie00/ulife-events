@@ -1,0 +1,98 @@
+<% include partials/header %>
+
+<div class="container">
+    
+    <header class="level">
+        <div class="container">
+            <h3 class="title is-3">Create an event</h1>
+        </div>
+    </header>
+    <!--<hr style="margin: 0 0 3rem;">-->
+    
+    <div>
+        <div class="container box">
+            <form method="POST" action="/events">
+                <div class="field">
+                    <label class="label">Title</label>
+                    <div class="control">
+                    <input class="input" name="title" type="text" placeholder="Event Title" required>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Subtitle</label>
+                    <div class="control">
+                    <input class="input" name="subtitle" type="text" placeholder="Subtitle">
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">School</label>
+                    <div class="control">
+                    <input class="input" name="schoolname" type="text" placeholder="School" required>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Description</label>
+                    <textarea class="textarea" name="description" placeholder="Give a description abut the event (include details)"></textarea>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Contact Name</label>
+                    <div class="control">
+                    <input class="input" name="contact_name" type="text" placeholder="Event Title" required>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Contact Email</label>
+                    <div class="control">
+                    <input class="input" name="contact_email" type="text" placeholder="Contact Email" required>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Contact Phone</label>
+                    <div class="control">
+                    <input class="input" name="contact_phone" type="text" placeholder="Contact Phone" required>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Location</label>
+                    <div class="control">
+                    <input class="input" name="location" type="text" placeholder="Event Location" required>
+                    </div>
+                </div>   
+                
+                <label class="label">Event type</label>
+                <div class="field control">
+                    <label class="radio">
+                        <input type="radio" name="event_scope" value="public">
+                        Public
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="event_scope" value="private">
+                        Private
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="event_scope" value="RSO">
+                        RSO
+                    </label>
+                </div>
+                
+                <hr style="margin: 0 0 3rem;">
+                <div class="field">
+                    <div class="control">
+                        <button class="button">Post!</button>
+                    </div>
+                </div>
+
+            </form>                            
+        </div>
+    </div>
+    
+</div>
+
+<% include partials/footer %>

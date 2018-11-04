@@ -1,0 +1,28 @@
+#hero-landing {
+    
+background-image:url('/images/spirit_splash.jpg');
+background-size: cover;
+
+}
+
+.landing-card {
+    background: #ffffff;
+    border-radius: 4px !important;
+    padding: 32px !important;
+    padding-bottom: 24px !important;
+    width: 460px !important;
+    margin-bottom: 64px !important;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+#map {
+height: 100%;
+width: 100%;
+}
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    
+}

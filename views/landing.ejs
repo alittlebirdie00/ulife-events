@@ -1,0 +1,37 @@
+<% include partials/header %>
+
+<section class="hero is-light is-fullheight">
+  <div class="hero-body" id="hero-landing">
+    <div class="container">
+      <div class="landing-card">
+        
+      <form method="GET" action="/events/search">
+        <div class="field">
+          <div class="control">
+            <h1 class="title">
+            View every event thats happening at any university. 
+            </h1>
+          </div>
+        </div>
+        
+        <div class="field">
+          <div class="control">
+            <label class="label">School</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="Any School" name="school">
+              </div>            
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Search</button>
+          </div>
+        </div>          
+      </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% include partials/footer %>
